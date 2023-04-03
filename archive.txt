@@ -1,0 +1,76 @@
+class aretes(object):
+    def __init__(self, nom: str, poids: int, type):
+        self.nom = nom
+        self.poids = poids
+        self.depart = self.nom + "_h"
+        self.arrivee = self.nom + "_b"
+        self.type = type
+
+
+liste_aretes = [
+    aretes("roc merlet", 1, "piste rouge"),
+    aretes("chanrossa", 1, "piste noire"),
+    aretes("jean pachod", 1, "piste rouge"),
+    aretes("ROC MERLET", 1, "telesiege"),
+    aretes("CHANROSSA", 1, "telesiege express debrayable"),
+    aretes("plan mugnier", 1, "piste bleue"),
+    aretes("mont russes", 1, "piste bleue"),
+    aretes("pyramide", 1, "piste bleue"),
+    aretes("roc mugnier", 1, "piste rouge"),
+    aretes("creux", 1, "piste rouge"),
+    aretes("ROC MUGNIER", 1, "telesiege express debrayable")
+]
+
+print(liste_aretes[0].arrivee)
+
+class noeuds(object):
+    def __init__(self, nom: str, type):
+        self.nom = nom
+        self.type = type
+
+
+
+class sommet():
+    def __init__(self, nom, successeurs):
+        self.nom = nom
+        self.successeurs = successeurs
+
+
+liste_sommets = [
+    sommet("roc merlet h", ["roc merlet b", "ROC MERLET b", "jean pachod b", "chanrossa b", "CHANROSSA b"]),
+    sommet("jean pachod h", ["roc merlet b", "ROC MERLET b", "jean pachod b", "chanrossa b", "CHANROSSA b"]),
+    sommet("chanrossa h", ["roc merlet b", "ROC MERLET b", "jean pachod b", "chanrossa b", "CHANROSSA b"]),
+    sommet("ROC MERLET h", []),
+    sommet("CHANROSSA h", []),
+    sommet("plan mugnier h", [])
+]
+
+
+
+
+
+
+
+class Aretes():
+    def __init__(self, nom: str, poids: int, type: str):
+        self.nom = nom
+        self.poids = poids
+        self.type = type
+
+
+class Sommet():
+    def __init__(self, aretes_entrantes: list, aretes_sortantes: list):
+        self.aretes_entrantes = aretes_entrantes
+        self.aretes_sortantes = aretes_sortantes
+
+
+class Intersection():
+    def __init__(self, aretes_entrantes: list, aretes_sortantes: list):
+        self.aretes_entrantes = aretes_entrantes
+        self.aretes_sortantes = aretes_sortantes
+
+
+sommet_1 = Sommet([Aretes("roc merlet", 1, "piste rouge")], [])
+
+class Arete():
+    pass
