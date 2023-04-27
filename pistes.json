@@ -1,0 +1,12 @@
+{
+    "sommets": [
+        {
+            "nom": ["Chanrossa", "Roc Merlet H", "Jean Pachod H", "Chanrossa H", "ROC MERLET B", "CHANROSSA B"],
+            "entrant": ["ROC MERLET", "CHANROSSA"],
+            "sortant": ["Roc Merlet", "Jean Pachod", "Chanrossa"]
+        }
+    ],
+    "arcs": [
+
+    ]
+}
